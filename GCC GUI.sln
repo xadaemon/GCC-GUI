@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "g++ GUI", "g++ GUI\g++ GUI.csproj", "{8C7A218D-D671-4875-9D9F-B68A30738CB3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCC GUI", "g++ GUI\GCC GUI.csproj", "{8C7A218D-D671-4875-9D9F-B68A30738CB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
