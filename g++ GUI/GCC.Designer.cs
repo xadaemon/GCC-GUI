@@ -47,7 +47,7 @@
             this.compileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.link = new System.Windows.Forms.LinkLabel();
             this.watcher = new System.IO.FileSystemWatcher();
-            this.WatchFS = new System.Windows.Forms.CheckBox();
+            this.watchFS = new System.Windows.Forms.CheckBox();
             this.compileStart = new System.Windows.Forms.Button();
             this.cmdArgs = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -193,15 +193,15 @@
             this.watcher.IncludeSubdirectories = true;
             this.watcher.SynchronizingObject = this;
             // 
-            // WatchFS
+            // watchFS
             // 
-            this.WatchFS.AutoSize = true;
-            this.WatchFS.Location = new System.Drawing.Point(12, 302);
-            this.WatchFS.Name = "WatchFS";
-            this.WatchFS.Size = new System.Drawing.Size(130, 17);
-            this.WatchFS.TabIndex = 4;
-            this.WatchFS.Text = "Watch for file chages.";
-            this.WatchFS.UseVisualStyleBackColor = true;
+            this.watchFS.AutoSize = true;
+            this.watchFS.Location = new System.Drawing.Point(12, 302);
+            this.watchFS.Name = "watchFS";
+            this.watchFS.Size = new System.Drawing.Size(130, 17);
+            this.watchFS.TabIndex = 4;
+            this.watchFS.Text = "Watch for file chages.";
+            this.watchFS.UseVisualStyleBackColor = true;
             // 
             // compileStart
             // 
@@ -215,9 +215,9 @@
             // 
             // cmdArgs
             // 
-            this.cmdArgs.Location = new System.Drawing.Point(75, 276);
+            this.cmdArgs.Location = new System.Drawing.Point(73, 276);
             this.cmdArgs.Name = "cmdArgs";
-            this.cmdArgs.Size = new System.Drawing.Size(270, 20);
+            this.cmdArgs.Size = new System.Drawing.Size(272, 20);
             this.cmdArgs.TabIndex = 7;
             // 
             // label1
@@ -342,7 +342,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmdArgs);
             this.Controls.Add(this.compileStart);
-            this.Controls.Add(this.WatchFS);
+            this.Controls.Add(this.watchFS);
             this.Controls.Add(this.link);
             this.Controls.Add(this.delObjFiles);
             this.Controls.Add(this.topMenu);
@@ -386,7 +386,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox cmdArgs;
         private System.Windows.Forms.Button compileStart;
-        private System.Windows.Forms.CheckBox WatchFS;
+        private System.Windows.Forms.CheckBox watchFS;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox makefileContents;
         private System.Windows.Forms.Button findOutput;

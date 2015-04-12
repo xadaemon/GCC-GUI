@@ -31,7 +31,7 @@ namespace g___GUI
             fn = fileDialogInput.FileName;
             using (FileStream fs = File.Open(fn, FileMode.Open))
             {
-                byte[] b = new byte[1024];
+                byte[] b = new byte[6114];
                 UTF8Encoding temp = new UTF8Encoding(true);
                 while (fs.Read(b, 0, b.Length) > 0)
                 {
@@ -42,7 +42,8 @@ namespace g___GUI
 
         private void compileStart_Click(object sender, EventArgs e)
         {
-            ProcessStartInfo p = new ProcessStartInfo("cd "+this.baseFolder.Text+"|make", this.cmdArgs.Text);
+            ProcessStartInfo p = new ProcessStartInfo("make ", this.cmdArgs.Text);
+            p.WorkingDirectory = this.baseFolder.Text;
             p.UseShellExecute = false;
             p.RedirectStandardOutput = true;
             p.RedirectStandardError = true;
