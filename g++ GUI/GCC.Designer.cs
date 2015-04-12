@@ -140,7 +140,7 @@
             // 
             // fileDialogInput
             // 
-            this.fileDialogInput.Filter = "C++|*.cpp,*.hpp,*.h|C|*.c,*.h|makefile|makefile";
+            this.fileDialogInput.Filter = "makefile|makefile|All files|*.*";
             // 
             // fileDialogOutput
             // 
