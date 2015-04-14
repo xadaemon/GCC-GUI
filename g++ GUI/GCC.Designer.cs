@@ -167,13 +167,14 @@
             this.customContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.compileToolStripMenuItem});
             this.customContext.Name = "customContext";
-            this.customContext.Size = new System.Drawing.Size(120, 26);
+            this.customContext.Size = new System.Drawing.Size(153, 48);
             // 
             // compileToolStripMenuItem
             // 
             this.compileToolStripMenuItem.Name = "compileToolStripMenuItem";
-            this.compileToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.compileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.compileToolStripMenuItem.Text = "Compile";
+            this.compileToolStripMenuItem.Click += new System.EventHandler(this.compileToolStripMenuItem_Click);
             // 
             // link
             // 

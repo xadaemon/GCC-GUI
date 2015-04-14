@@ -9,11 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
+using System.Configuration;
+
 
 namespace g___GUI
 {
     public partial class GCC : Form
     {
+        
         private string fn;
         public GCC()
         {
@@ -58,6 +61,19 @@ namespace g___GUI
             this.baseFolderSelector.ShowDialog();
             string baseFolderVar = baseFolderSelector.SelectedPath;
             this.baseFolder.Text = baseFolderVar;
+        }
+
+        private void compileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo p = new ProcessStartInfo("make ", this.cmdArgs.Text);
+            p.WorkingDirectory = this.baseFolder.Text;
+            p.UseShellExecute = false;
+            p.RedirectStandardOutput = true;
+            p.RedirectStandardError = true;
+            Process Reg = Process.Start(p);
+            string output = Reg.StandardOutput.ReadToEnd();
+            Reg.WaitForExit();
+            this.stdout.Text = output;
         }
     }
 }
