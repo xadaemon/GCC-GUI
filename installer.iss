@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "GCC GUI"
-#define MyAppVersion "1.7"
+#define MyAppVersion "1.0.0.7-r2"
 #define MyAppPublisher "Mug Foundation"
 #define MyAppURL "https://github.com/matheusxaviersi/GCC-GUI"
 #define MyAppExeName "GCC GUI.exe"
@@ -23,10 +23,11 @@ DefaultDirName={pf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
 LicenseFile=C:\Users\Matheus\Documents\GitHub\g++ GUI\LICENSE
-OutputBaseFilename=setup
+OutputBaseFilename=setup{#MyAppVersion}
 SetupIconFile=C:\Users\Matheus\Documents\GitHub\g++ GUI\fileicon.ico
-Compression=lzma
 SolidCompression=yes
+DisableStartupPrompt=False
+MinVersion=0,5.01
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
@@ -36,7 +37,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 0,6.1
 
 [Files]
-Source: "C:\Users\Matheus\Documents\GitHub\g++ GUI\g++ GUI\bin\Debug\GCC GUI.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Matheus\Documents\GitHub\g++ GUI\g++ GUI\bin\Release\GCC GUI.exe"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
@@ -45,6 +46,7 @@ Name: "{group}\{cm:ProgramOnTheWeb,{#MyAppName}}"; Filename: "{#MyAppURL}"
 Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"
 Name: "{commondesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
 Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: quicklaunchicon
+Name: "{group}\{cm:UninstallProgram, {#MyAppName}}"; Filename: "{uninstallexe}"
 
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
