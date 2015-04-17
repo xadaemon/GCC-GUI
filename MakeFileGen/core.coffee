@@ -4,3 +4,5 @@
 makeFileGen =
     core: () ->
       inputFile = arguments[0] or "../makefile"
+      flags = arguments[1] or ""
+      

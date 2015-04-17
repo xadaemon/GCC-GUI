@@ -16,7 +16,6 @@ namespace g___GUI
 {
     public partial class GCC : Form
     {
-        
         private string fn;
         public GCC()
         {
